@@ -1,0 +1,55 @@
+{
+  "name": "text-marshal",
+  "version": "0.0.1",
+  "description": "Text Marshal is used to format, assemble and arrange the text as per the assigned pattern.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint . --ext .ts",
+    "test": "jest --config jestconfig.json",
+    "prepare": "npm run build",
+    "preversion": "npm run lint",
+    "prepublishOnly": "npm test && npm run lint",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags",
+    "check-updates": "npx npm-check-updates",
+    "check-updates:minor": "npx npm-check-updates --target minor",
+    "check-updates:patch": "npx npm-check-updates --target patch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taimoorsattar7/text-marshal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/taimoorsattar7/text-marshal/issues"
+  },
+  "homepage": "https://github.com/taimoorsattar7/text-marshal#readme",
+  "files": [
+    "lib/**/*"
+  ],
+  "keywords": [
+    "Text Marshal",
+    "format",
+    "text",
+    "pattern"
+  ],
+  "author": "Taimoor Sattar",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^28.1.4",
+    "@types/node": "^18.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "ansi-regex": ">=6.0.1",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "jest": "^28.1.2",
+    "ts-jest": "^28.0.5",
+    "typescript": "^4.7.4"
+  }
+}
